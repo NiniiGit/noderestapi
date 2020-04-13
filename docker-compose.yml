@@ -15,5 +15,9 @@ services:
       - ./data:/data/db
     ports:
       - "27017:27017"
+  varnish:
+    ports:
+      - 27017:27017
+      - 3000:8080
   
   
