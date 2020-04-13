@@ -1,0 +1,17 @@
+sudo: required
+services:
+  - docker 
+
+deploy:
+  provider: elasticbeanstalk
+  region: "ap-south-1"
+  app: "noderestapi"
+  env: "Noderestapi-env"
+  bucket_name: "elasticbeanstalk-ap-south-1-048831836751"
+  bucket_path: "noderestapi"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+
+  
